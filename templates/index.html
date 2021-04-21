@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>English To Morse Code</title>
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+	<!-- Badge in Bottom Right Corner -->
+	<link rel="stylesheet" href="https://badge.coolcodersj.repl.co/style.css" />
+	<a class="badge" href="https://replit.com/@IMightBeMe/" />
+	<img src="{{ url_for('static', filename='img/replit-logo.svg') }}" alt="replit">IMightBeMe</a>
+
+	<!-- Thing for POST -->
+	<form action="{{ url_for('submit') }}" method="post">
+		<textarea name="text" id="text" placeholder="Type English Here..."></textarea>
+		<input type="submit" class="btn" value="Convert to Morse Code">
+	</form>
+
+	{{ message | safe }}
+</body>
+</html>
